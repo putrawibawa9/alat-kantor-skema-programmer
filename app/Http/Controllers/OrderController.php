@@ -66,8 +66,11 @@ class OrderController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Order $order)
+    public function destroy($id)
     {
-        //
+        // delete order
+        Order::destroy($id);
+        // return with success message
+        return redirect('/admin/order')->with('success', 'Order berhasil dihapus');
     }
 }

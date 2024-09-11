@@ -34,3 +34,11 @@ Route::post('/review/submit', [ReviewController::class, 'store']);
 
 // Order
 Route::get('/order/{id}', [OrderController::class, 'order']);
+
+Route::get('/search', [UserDashboardController::class, 'search'])->name('search');
+
+Route::get('/order', [UserDashboardController::class, 'order']);
+Route::get('/admin/order', [UserDashboardController::class, 'adminOrder']);
+Route::post('/admin/order/confirm/{id}', [OrderController::class, 'destroy']);
+
+

@@ -4,7 +4,9 @@
         <h1>Tabel Produk</h1>
         <a  href="/produk/create">Tambah Produk</a>
         <a  href="/brand/create">Tambah Brand</a>
+        <a  href="/admin/order">Lihat Pesanan</a>
 
+@dd($produk)
         <br>
         <table id="pengaduanTable">
             <thead>
