@@ -39,6 +39,8 @@ Route::get('/search', [UserDashboardController::class, 'search'])->name('search'
 
 Route::get('/order', [UserDashboardController::class, 'order']);
 Route::get('/admin/order', [UserDashboardController::class, 'adminOrder']);
+Route::get('/admin/review', [UserDashboardController::class, 'adminReview']);
 Route::post('/admin/order/confirm/{id}', [OrderController::class, 'destroy']);
+
 
 

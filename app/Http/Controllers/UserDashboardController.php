@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Models\Produk;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
 class UserDashboardController extends Controller
@@ -42,4 +43,9 @@ public function adminOrder(){
     return view('produk.order', compact('orders'));
 }
 
+public function adminReview(){
+    $reviews = Review::with('produk')->get();
+    return view('produk.review', compact('reviews'));
+
+}
 }

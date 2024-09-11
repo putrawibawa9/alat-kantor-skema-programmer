@@ -26,6 +26,9 @@
             .top-right-link:hover {
                 background-color: #45a049;
             }
+            body{
+                background-color: #ECDFCC;
+            }
         </style>
     </head>
     <body>
