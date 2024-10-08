@@ -95,8 +95,9 @@ h1 {
                 <tr>
                     <th>Nama Produk</th>
                     <th>Deskripsi Produk</th>
-                    <th>Brand</th>
                     <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th>Tanggal</th>
                 </tr>
             </thead>
             <tbody>
@@ -104,8 +105,9 @@ h1 {
                 <tr>
                     <td>{{ $order->produk->nama }}</td>
                     <td>{{ $order->produk->deskripsi }}</td>
-                    <td>{{ $order->produk->brand->name }}</td>
                     <td>Rp. {{ $order->produk->harga }}</td>
+                    <td>{{ $order->jumlah }}</td>
+                    <td>{{ $order->created_at }}</td>
                 </tr>
                 @endforeach
             </tbody>
@@ -113,8 +115,6 @@ h1 {
 
         <!-- Total Price -->
         <div class="total-price">
-            Total Price: <span>Rp. {{ $totalPrice }}</span>
-            <br>
             <a href="/">BAYAR!</a>
         </div>
     </div>

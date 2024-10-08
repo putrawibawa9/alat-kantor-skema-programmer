@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('produk', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->foreignId('brand_id')->constrained();
             $table->text('deskripsi');
             $table->integer('harga');
             $table->integer('stok');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Produk;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -15,11 +16,15 @@ class OrderController extends Controller
         //
     }
 
-    public function order($id){
-        // add to order database
+    public function order(Request $request){
         Order::create([
-            'produk_id' => $id
+            'produk_id' => $request->produk_id,
+            'jumlah' => $request->jumlah,
         ]);
+        // decrese product stock
+        $produk = Produk::find($request->produk_id);
+        $produk->stok = $produk->stok - $request->jumlah;
+        $produk->save();
 // return with success message
         return redirect('/user/dashboard')->with('success', 'Produk berhasil ditambahkan ke keranjang');
     }

@@ -19,7 +19,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #48CFCB, #161D6F);
+    background: linear-gradient(to right, #C96868, #FADFA1);
     color: #fff;
     min-height: 100vh;
     display: flex;
@@ -102,7 +102,7 @@ button {
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #BF2EF0, #161D6F);
+    background: linear-gradient(to right, #C96868, #FADFA1);
     color: #fff;
     min-height: 100vh;
     display: flex;

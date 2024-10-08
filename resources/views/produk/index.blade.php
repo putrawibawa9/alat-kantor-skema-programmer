@@ -2,16 +2,12 @@
     @section('content')
     <div class="container">
         <h1>Tabel Produk</h1>
-        <a  href="/produk/create">Tambah Produk</a>
-        <a  href="/brand/create">Tambah Brand</a>
-        <a  href="/admin/order"> Pesanan</a>
-        <a  href="/admin/review"> Review</a>
+       
 
         <br>
         <table id="pengaduanTable">
             <thead>
                 <tr>
-                    <th>Brand</th>
                     <th>Nama</th>
                     <th>Deskripsi</th>
                     <th>Harga</th>
@@ -25,7 +21,6 @@
                 @foreach ($produk as $item)
                     
                 <tr>
-                    <td>{{ $item->brand->name }}</td>
                     <td>{{ $item->nama }}</td>
                     <td>{{ $item->deskripsi }}</td>
                     <td>{{ $item->harga }}</td>
@@ -46,6 +41,8 @@
                 <!-- Add more rows as needed -->
             </tbody>
         </table>
+        <a  href="/produk/create">Tambah Produk</a>
+<a  href="/admin/order"> Penjualan</a>
        <a href="/" style="background-color: red; text-decoration: none; font-weight: bold; padding: 5px 10px; border: 1px solid red; border-radius: 5px;">Logout</a>
     </div>
     @endsection

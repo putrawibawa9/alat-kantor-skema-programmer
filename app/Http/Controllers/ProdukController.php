@@ -22,8 +22,7 @@ class ProdukController extends Controller
      */
     public function create()
     {
-        $brand = Brand::all();
-        return view('produk.create', compact('brand'));
+        return view('produk.create');
     }
 
     /**
@@ -40,7 +39,6 @@ class ProdukController extends Controller
         // create new produk
         $produk = new Produk;
         $produk->nama = $request->nama;
-        $produk->brand_id = $request->brand_id;
         $produk->deskripsi = $request->deskripsi;
         $produk->harga = $request->harga;
         $produk->stok = $request->stok;

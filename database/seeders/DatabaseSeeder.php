@@ -15,9 +15,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Brand::create(['name' => 'Nike']);
-        Brand::create(['name' => 'Adidas']);
-        Brand::create(['name' => 'Supreme']);
         
        Produk::create([
             'nama' => 'Nike Air Max 90',
@@ -25,7 +22,7 @@ class DatabaseSeeder extends Seeder
             'harga' => 1500000,
             'stok' => 10,
             'gambar' => 'nike-air-max-90.jpg',
-            'brand_id' => 1,
+      
         ]);
 
         Produk::create([
@@ -34,7 +31,7 @@ class DatabaseSeeder extends Seeder
             'harga' => 1200000,
             'stok' => 10,
             'gambar' => 'adidas-superstar.jpg',
-            'brand_id' => 2,
+  
         ]);
 
         Produk::create([
@@ -43,7 +40,7 @@ class DatabaseSeeder extends Seeder
             'harga' => 1000000,
             'stok' => 10,
             'gambar' => 'supreme-hoodie.jpg',
-            'brand_id' => 3,
+   
         ]);
 
     }

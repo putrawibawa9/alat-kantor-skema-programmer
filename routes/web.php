@@ -16,6 +16,11 @@ Route::get('/admin/login', AuthController::class . '@loginForm');
 Route::post('/admin/login', AuthController::class . '@login');
 Route::get('/admin/register', AuthController::class . '@registerForm');
 Route::post('/admin/register', AuthController::class . '@register');
+// routes/web.php
+use App\Http\Controllers\PDFController;
+
+Route::get('/generate-pdf', [PDFController::class, 'generatePDF']);
+
 
 Route::get('/', function(){
     return view('user.login');
@@ -33,7 +38,7 @@ Route::get('/review/{id}', [ReviewController::class, 'index']);
 Route::post('/review/submit', [ReviewController::class, 'store']);
 
 // Order
-Route::get('/order/{id}', [OrderController::class, 'order']);
+Route::post('/order', [OrderController::class, 'order']);
 
 Route::get('/search', [UserDashboardController::class, 'search'])->name('search');
 

@@ -5,13 +5,6 @@
         <form action="/produk" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <label for="brand_id">Brand</label>
-                <select id="brand_id" name="brand_id" required>
-                    <option value="">Pilih Brand</option>
-                    @foreach ($brand as $row)
-                        <option value="{{ $row->id }}">{{ $row->name }}</option>
-                    @endforeach
-                </select>
             </div>
             <div class="form-group">
                 <label for="nama">Nama</label>
